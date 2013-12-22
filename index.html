@@ -1,0 +1,453 @@
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <title>Parse JavaScript Todo App</title>
+    <link rel="stylesheet" type="text/css" href="css/index_style.css">
+    <script src="js/jquery-1.7.1.js"></script> 
+    <script src="js/jquery.animate-enhanced.js"></script> 
+    <script src="js/iscroll.js"></script> 
+    <script src="js/noClickDelay.js"></script> 
+    <script src="js/index.js"></script> 
+    <link rel="stylesheet" href="css/viewnavigator.css" type="text/css"/> 
+    <script src="js/viewnavigator.js"></script> 
+    <link rel="stylesheet" href="css/activityIndicator.css" type="text/css" />
+    <script src="./js/parse-1.2.13.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <link href="./css/css.css" media="all" rel="stylesheet" type="text/css"/>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="./js/underscore-1.1.6.js"></script>
+    <script src="//www.parsecdn.com/js/parse-1.1.15.min.js"></script>
+    <script src="./js/flot.js"></script>
+    <!--<script src="./js/app.js"></script>-->
+  </head>
+
+  <body onclick="" class="Blank" onload="navigate('page1');">
+
+   
+
+    <!-- Open Page -->
+    <div class="page" id="page1">
+       <div>
+  <div class="logo_box">
+    <img id="logo" src="img/bud_logo.png">
+  </div>
+         <div class="buttons">
+          <button id="button-login" onclick="navigate('page2');">Login</button>
+          <button id="button-reg" onclick="navigate('page3');" >Register</button>
+         </div>
+
+       </div>
+    </div>
+
+    <!-- Login Page -->
+    <div class="page" id="page2">
+       <div>
+
+       <header class="TitleBar">
+           <h3>Login</h3>      
+
+       </header>
+  <div class="logo_box">
+    <img id="logo" src="img/bud_logo.png">
+  </div>
+       <div class="login-form" contenteditabel="true" class="Blank">
+         <form contenteditabel="true" >
+     
+          <input class="textbox" type="text" id="login-username" placeholder=" *username">
+          <input class="textbox" type="password" id="login-password" placeholder=" *password">     
+          
+         </form>
+         <button id="enter" onclick="navigate('page4');">Login</button>
+      </div>
+     </div>
+    </div>
+
+    <!-- Register Page -->
+    <div class="page" id="page3">
+      <header class="TitleBar">
+           <h3>Register</h3>         
+
+       </header>
+  <div class="logo_box">
+    <img id="logo" src="img/bud_logo.png">
+  </div>
+  <div class="registry-form">
+   <div contenteditabel="true" class="form">
+     <form contenteditabel="true" class="myLoginForm">
+      <input class="textbox" type="email" id="email" placeholder=" *email">
+      <input class="textbox" type="text" id="username" placeholder=" *username">
+      <input class="textbox" type="password" id="password" placeholder=" *password">
+      <input class="textbox" type="password" id="confirm" placeholder=" *confirm password">
+     </form> 
+      <button>Register</button>
+</div>
+
+     
+   </div>
+    
+    </div>
+
+    <!-- Menu Page -->
+    <div class="page" id="page4">
+       <header class="TitleBar">
+           <h3>Menu</h3>         
+
+       </header>
+        <div id="menu_box">
+      <div id="menu-buddies" class="MenuOptionsLeft"><img onclick="navigate('page5')" onmouseover="myButton1();" id="but" src="img/buddies_button.png"></div>
+      
+      <div id="menu-buds" class="MenuOptionsRight"><img onclick="navigate('page6');" onmouseover="myBuds();" id="but2"  src="img/buds_button.png"/></div>
+      
+      <div id="menu-redeem" class="MenuOptionsLeft"><img onclick="navigate('page10');" onmouseover="myPromo();" id="but3" src="img/code_button.png"/></div>
+       
+      <div id="menu-king" class="MenuOptionsRight"><img onmouseover="myKing();" id="but4" src="img/king_button.png" onclick="navigate('page13');"/></div>
+
+      <div id="menu-buddies" class="MenuOptionsLeft"><img onmouseover="mySend();" id="but5" src="img/send_button.png" onclick="navigate('page14');"></div>
+
+      <div id="menu-buds" class="MenuOptionsRight"><img  onmouseover="myProfile();" id="but6" src="img/profile_button.png" onclick="navigate('page16');"/></div>
+    </div>
+
+    </div>
+
+    <!-- Buddies Page -->
+    <div class="page" id="page5">
+       <header class="TitleBar">
+           <h3>My Buddies</h3>  
+           <img id="pro_small" src="img/pro_small.png" onclick="navigate('page16');">
+
+           <div id="goBack" onclick="navigate('page4')"><img id="back" src="img/back.png" /></div>     
+
+       </header>
+  
+    <div id="friend_list">
+      <div>
+      <div class="myBuddie"><p id="buddies" href="#">Mark Johnson</p><img class="profile_photo" src="img/profile.png"/></div>
+      
+      <div class="myBuddie"><p id="buddies" href="#">Jane McCarthy</p><img class="profile_photo" src="img/profile.png"/></div>
+      
+      <div class="myBuddie"><p id="buddies" href="#">Bill Crystal</p><img class="profile_photo" src="img/profile.png"/></div>
+       
+      <div class="myBuddie"><p id="buddies" href="#">Maire Davis</p><img class="profile_photo" src="img/profile.png"/></div>
+
+      <div class="myBuddie"><p id="buddies" href="#">Danny Cab</p><img class="profile_photo" src="img/profile.png"/></div>
+      
+      <div class="myBuddie"><p id="buddies" href="#">Brian O' Sullivan</p><img class="profile_photo" src="img/profile.png"/></div>
+      
+      <div class="myBuddie"><p id="buddies" href="#">Ben Gilligan</p><img class="profile_photo" src="img/profile.png"/></div>
+       
+      <div class="myBuddie"><p id="buddies" href="#">Ellie Smith</p><img class="profile_photo" src="img/profile.png"/></div>
+      </div>
+    </div>
+       <div id="footer">
+         <div id="nav1"><img class="icon_small" src="img/home_small.png" onclick="navigate('page4');"></div>
+         <div id="nav2"><img class="icon_small" src="img/send_small.png" onclick="navigate('page9');"></div>
+
+         <div id="nav3"><img class="icon_small" src="img/bud_buttons_small.png" onclick="navigate('page6');"></div>
+    </div>
+    </div>
+
+
+
+    <!-- Buds Page -->
+    <div class="page" id="page6">
+       <header class="TitleBar">
+           <h3>My Buds</h3>         
+           <img onclick="navigate('page16')" id="pro_small" src="img/pro_small.png">
+           <div id="goBack" onclick="navigate('page4')"><img id="back" src="img/back.png"></div>
+       </header>
+
+    <div id="buds_list">
+      <img onclick="navigate('page7'); " onmouseover="mySent();" id="sent" src="img/sent_button.png">
+      
+      <img onclick="navigate('page8')" onmouseover="myRec();" id="rec" src="img/rec_button.png">
+      
+     <img onclick="navigate('page9')" onmouseover="myStock();" id="stock" src="img/stock_button.png">    
+      
+    </div>
+
+    <footer>
+         <div onclick="navigate('page4');" id="nav1"><img class="icon_small" src="img/home_small.png"></div>
+         <div id="nav2"><img class="icon_small" src="img/send_small.png" onclick="navigate('page9');"></div>
+
+         <div id="nav3"><img class="icon_small" src="img/buddies_button_small.png" onclick="navigate('page5');"></div>
+    </footer>
+    </div>
+
+    <!-- Sent Page -->
+    <div class="page" id="page7">
+       <header class="TitleBar">
+           <h3>Sent</h3>         
+           <img id="pro_small" src="img/pro_small.png" onclick="navigate('page16');">
+           <div id="goBack" onclick="navigate('page6')"><img id="back" src="img/back.png" /></div>
+       </header>
+
+    <div id="sent_list">
+      <div>
+      <div class="myBuddie"><a id="buddies" href="#">Mark Johnson</a><button class="View">View Message</button><br><p>12/11/2013</p></div>
+      
+      <div class="myBuddie"><a id="buddies" href="#">Jane McCarthy</a><button class="View">View Message</button><br><p>12/11/2013</p></div>
+      
+      <div class="myBuddie"><a id="buddies" href="#">Bill Crystal</a><button class="View">View Message</button><br><p>12/11/2013</p></div>
+       
+      <div class="myBuddie"><a id="buddies" href="#">Maire Davis</a><button class="View">View Message</button><br><p>12/11/2013</p></div>
+
+      <div class="myBuddie"><a id="buddies" href="#">Danny Cab</a><button class="View">View Message</button><br><p>12/11/2013</p></div>
+      
+      <div class="myBuddie"><a id="buddies" href="#">Brian O' Sullivan</a><button class="View">View Message</button><br><p>12/11/2013</p></div>
+      
+      <div class="myBuddie"><a id="buddies" href="#">Ben Gilligan</a><button class="View">View Message</button><br><p>12/11/2013</p></div>
+       
+      <div class="myBuddie"><a id="buddies" href="#">Ellie Smith</a><button class="View">View Message</button><br><p>12/11/2013</p></div>
+      </div>
+    </div>
+
+        <footer>
+         <div onclick="navigate('page4');" id="nav1"><img class="icon_small" src="img/home_small.png"></div>
+         <div id="nav2"><img class="icon_small" src="img/send_small.png" onclick="navigate('page9');"></div>
+
+         <div id="nav3"><img class="icon_small" src="img/buddies_button_small.png" onclick="navigate('page5');"></div>
+    </footer>
+
+    </div>
+
+    <!-- Received Page -->
+    <div class="page" id="page8">
+        <header class="TitleBar">
+           <h3>Received</h3>         
+          <img id="pro_small" src="img/pro_small.png" onclick="navigate('page16');">
+           <div id="goBack" onclick="navigate('page6')"><img id="back" src="img/back.png" /></div>
+       </header>
+
+    <div id="received_list">
+      <div>
+      <div class="myBuddie"><a >Mark Johnson</a><button class="View">View Message</button><br><p>12/11/2013</p></div>
+      
+      <div class="myBuddie"><a >Jane McCarthy</a><button class="View">View Message</button><br><p>12/11/2013</p></div>
+      
+      <div class="myBuddie"><a >Bill Crystal</a><button class="View">View Message</button><br><p>12/11/2013</p></div>
+       
+      <div class="myBuddie"><a>Maire Davis</a><button class="View">View Message</button><br><p>12/11/2013</p></div>
+
+      <div class="myBuddie"><a >Danny Cab</a><button class="View">View Message</button><br><p>12/11/2013</p></div>
+      
+      <div class="myBuddie"><a >Brian O' Sullivan</a><button class="View">View Message</button><br><p>12/11/2013</p></div>
+      
+      <div class="myBuddie"><a >Ben Gilligan</a><button class="View">View Message</button><br><p>12/11/2013</p></div>
+       
+      <div class="myBuddie"><a >Ellie Smith</a><button class="View">View Message</button><br><p>12/11/2013</p></div>
+      </div>
+    </div>
+
+        <footer>
+         <div onclick="navigate('page4');" id="nav1"><img class="icon_small" src="img/home_small.png"></div>
+         <div id="nav2"><img class="icon_small" src="img/send_small.png" onclick="navigate('page9');"></div>
+
+         <div id="nav3"><img class="icon_small" src="img/buddies_button_small.png" onclick="navigate('page5');"></div>
+    </footer>
+    </div>
+
+    <!-- Stock Page -->
+    <div class="page" id="page9">
+       <header class="TitleBar">
+           <h3>My Stock</h3>  
+           <img id="pro_small" src="img/pro_small.png" onclick="navigate('page16');">
+           <div id="goBack" onclick="navigate('page6')"><img id="back" src="img/back.png" /></div>    
+
+       </header>
+  
+    <div id="stock_list">
+      <div>
+      <div class="myBuddie"><img class="beer_stock" src="img/beer_stock.png"><button onclick="navigate('page14')" class="View">Send</button></div>
+      
+      <div class="myBuddie"><img class="beer_stock" src="img/beer_stock.png"><button onclick="navigate('page14')"class="View">Send</button></div>
+      
+      <div class="myBuddie"><img class="beer_stock" src="img/beer_stock.png"><button onclick="navigate('page14')"class="View">Send</button></div>
+       
+      <div class="myBuddie"><img class="beer_stock" src="img/beer_stock.png"><button onclick="navigate('page14')"class="View">Send</button></div>
+
+      <div class="myBuddie"><img class="beer_stock" src="img/beer_stock.png"><button onclick="navigate('page14')"class="View">Send</button></div>
+      
+      <div class="myBuddie"><img class="beer_stock" src="img/beer_stock.png"><button onclick="navigate('page14')"class="View">Send</button></div>
+      
+      <div class="myBuddie"><img class="beer_stock" src="img/beer_stock.png"><button onclick="navigate('page14')"class="View">Send</button></div>
+       
+      <div class="myBuddie"><img class="beer_stock" src="img/beer_stock.png"><button onclick="navigate('page14')"class="View">Send</button></div>
+      </div>
+    </div>
+       <footer>
+         <div onclick="navigate('page4');" id="nav1"><img class="icon_small" src="img/home_small.png"></div>
+         <div id="nav2"><img class="icon_small" src="img/send_small.png" onclick="navigate('page9');"></div>
+
+         <div id="nav3"><img class="icon_small" src="img/buddies_button_small.png" onclick="navigate('page5');"></div>
+    </footer>
+    </div>
+
+    <!-- Promo Page -->
+    <div class="page" id="page10">
+       <header class="TitleBar">
+           <h3>Enter Code</h3>         
+
+       </header>
+       <div class="logo_box">
+    <img id="logo" src="img/bud_logo.png">
+  </div>
+   <div class="buttons">
+     <button onclick="navigate('page11')">Enter 5 Digit Code</button></a>
+     <button>Scan QR Code</button>
+   </div>
+
+    </div>
+    
+    <!-- Enter Code Page -->
+    <div class="page" id="page11">
+       <header class="TitleBar">
+           <h3>Enter Code</h3>         
+           
+       </header>
+       <div class="logo_box">
+    <img id="logo" src="img/bud_logo.png">
+  </div>
+  
+   <div contenteditable="true" class="buttons">
+     <input type="number" class="textbox" placeholder=" *please enter your 5 digit promo code">
+     <button onclick="navigate('page12')">Submit</button>
+     
+   </div>
+    </div>
+
+    <!-- Award Page -->
+    <div class="page" id="page12">
+        <header class="TitleBar">
+           <h3>Enter Code</h3>         
+
+       </header>
+    <div class="award_message">
+       <h1>Congratulations!</h1>
+       <h2>Send your buddy a drink on us!</h2>
+       <img width= "200px" height="200px" src="img/beer_award.png">
+   </div>
+  
+   <div contenteditable="true" class="buttons">
+     
+     <button onclick="navigate('page9')">Send it</button>
+     <button onclick="navigate('page4')" >Save it</button>
+     
+   </div>
+    </div>
+
+    <!-- King Page -->
+    <div class="page" id="page13">
+        <header class="TitleBar">
+           <h3>King of Beers</h3>  
+           <img id="pro_small" src="img/pro_small.png" onclick="navigate('page16');">
+           <div id="goBack" onclick="navigate('page4')"><img id="back" src="img/back.png" /></div>      
+
+       </header>
+  
+    <div id="king_list">
+      <div>
+      <div class="pro_details"><h4 class="left" >Mark Johnson</h4><h4 class="right"> 32</h4></div>
+      
+     <div class="pro_details"><h4 class="left" >Jenny McCarthy</h4><h4 class="right"> 29</h4></div>
+      
+      <div class="pro_details"><h4 class="left" >Jane Marks</h4><h4 class="right"> 20</h4></div>
+       
+      <div class="pro_details"><h4 class="left" >Bill Friend</h4><h4 class="right"> 13</h4></div>
+
+      <div class="pro_details"><h4 class="left" >Joe Hogan</h4><h4 class="right"> 12</h4></div>
+      
+      <div class="pro_details"><h4 class="left" >Mike Murphy</h4><h4 class="right"> 11</h4></div>
+      
+      <div class="pro_details"><h4 class="left" >Phil Colin</h4><h4 class="right"> 7</h4></div>
+       
+      <div class="pro_details"><h4 class="left" >Ben Keohane</h4><h4 class="right"> 4</h4></div>
+      </div>
+    </div>
+       <footer>
+         <div onclick="navigate('page4');" id="nav1"><img class="icon_small" src="img/home_small.png"></div>
+         <div id="nav2"><img class="icon_small" src="img/send_small.png" onclick="navigate('page9');"></div>
+         <div id="nav3"><img class="icon_small" src="img/bud_buttons_small.png" onclick="navigate('page6');"></div>
+
+    </footer>
+    </div>
+
+    <!-- Choose Friend Page -->
+    <div class="page" id="page14">
+         <header class="TitleBar">
+           <h3>Choose a Friend</h3>         
+        <div id="goBack" onclick="navigate('page4')"><img id="back" src="img/back.png" /></div>
+       </header>
+  
+    <div id="choose_list">
+      <div>
+      <div onclick="mySendBox();" class="myBuddie"><a id="buddies" href="#">Mark Johnson</a><input class="check" type="checkbox"/><img class="profile_photo" src="img/profile.png"></div>
+      
+      <div onclick="mySendBox();" class="myBuddie"><a id="buddies" href="#">Jane McCarthy</a><input class="check" type="checkbox"><img class="profile_photo" src="img/profile.png"></div>
+      
+      <div onclick="mySendBox();" class="myBuddie"><a id="buddies" href="#">Bill Crystal</a><input class="check" type="checkbox"><img class="profile_photo" src="img/profile.png"></div>
+       
+      <div onclick="mySendBox();" class="myBuddie"><a id="buddies" href="#">Maire Davis</a><input class="check" type="checkbox"><img class="profile_photo" src="img/profile.png"></div>
+
+      <div onclick="mySendBox();" class="myBuddie"><a id="buddies" href="#">Danny Cab</a><input class="check" type="checkbox"><img class="profile_photo" src="img/profile.png"></div>
+      
+      <div onclick="mySendBox();" class="myBuddie"><a id="buddies" href="#">Brian O' Sullivan</a><input class="check" type="checkbox"><img class="profile_photo" src="img/profile.png"></div>
+      
+      <div onclick="mySendBox();" class="myBuddie"><a id="buddies" href="#">Ben Gilligan</a><input class="check" type="checkbox"><img class="profile_photo" src="img/profile.png"></div>
+       
+      <div onclick="mySendBox();" class="myBuddie"><a id="buddies" href="#">Ellie Smith</a><input class="check" type="checkbox"><img class="profile_photo" src="img/profile.png"></div>
+      </div>
+    </div>
+    <footer>
+         <div onclick="navigate('page4');" id="nav1"><img class="icon_small" src="img/home_small.png"></div>
+         <div id="nav2"><img class="icon_small" src="img/send_small.png" onclick="navigate('page9');"></div>
+         <div id="nav3"><img class="icon_small" src="img/bud_buttons_small.png" onclick="navigate('page6');"></div>
+
+    </footer>
+    
+    <div contenteditabel="true" id="send_message">
+      <div id="message_images">
+       <img class="beer_stock" src="img/beer_stock.png">
+       <img id="message_photo" src="img/profile.png">
+       </div>
+       <input id="message_box" type="text" placeholder="type a message to your buddy">
+       <button onclick="navigate('page15'); cancelSendBox();" class="View">Send</button></a>
+       <button onclick="cancelSendBox();"id="cancel_send">Cancel</button></a>
+    </div>
+    </div>
+
+    <!-- Thank You Page -->
+    <div class="page" id="page15">
+        <header class="TitleBar">
+           <h3>Thank You</h3>         
+
+       </header>
+       <div class="logo_box">
+    <img id="logo" src="img/bud_logo.png">
+  </div>
+   <div class="thanks_message">
+     <h1>Your Bud has been sent!<h1>
+
+     <h2>Thank You for using Bud for Buddies!<h2>
+    <button onclick="navigate('page4')">Menu</button>  
+   </div>
+    </div>
+
+    <!-- Profile Page -->
+    <div class="page" id="page16">
+        <header class="TitleBar">
+           <h3>My Profile</h3>         
+<div id="goBack" onclick="navigate('page4')"><img id="back" src="img/back.png" /></div>
+       </header>
+       <div class="profile_box">
+    <img  src="img/profile.png">
+    <button>Upload Photo</button>
+    <div class="pro_details"><h4 class="left">User Name:</h4><h4 class="right">Bill O' Brien</h4></div>
+    <div class="pro_details"><h4 class="left">Location:</h4><h4 class="right">Cork</h4></div>
+    <button id="edit">Edit Details</button>
+  </div>
+    </div>
+
+  </body>
+
+</html>
